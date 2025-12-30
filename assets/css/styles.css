@@ -198,6 +198,14 @@ img {
   max-width: 100%;
   align-self: center;
   margin-top: 1rem;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .perfil__data {
@@ -320,6 +328,15 @@ img {
   width: 250px;
   justify-self: center;
   transform: translateY(-2.5rem);
+  opacity: 0;
+  animation: slideUp 0.8s ease-out 0.5s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(-1rem);
+  }
 }
 
 .about__note {
