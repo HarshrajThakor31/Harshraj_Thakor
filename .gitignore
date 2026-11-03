@@ -30,6 +30,7 @@ pnpm-debug.log*
 # Markdown documentation files
 *.md
 **/*.md
+!README.md
 
 # OS & Editor
 .DS_Store
