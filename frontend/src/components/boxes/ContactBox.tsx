@@ -69,18 +69,18 @@ export const ContactBox = () => {
   )}&body=${encodeURIComponent(formData.message || "Hi Harshraj,")}`;
 
   return (
-    <div className="flex flex-col h-full justify-between p-5 sm:p-6 relative overflow-hidden group">
+    <div className="flex flex-col h-full justify-between p-4 xs:p-5 sm:p-6 relative overflow-hidden group">
       {/* Background ambient lighting */}
       <div className="absolute top-0 left-1/3 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-blue-500/15 transition-all duration-700" />
       <div className="absolute bottom-0 right-0 w-36 h-36 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Header bar */}
-      <div className="relative z-10 flex items-center justify-between">
+      <div className="relative z-10 flex flex-wrap items-center justify-between gap-1.5">
         <div className="flex items-center gap-1.5">
           <span className="p-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400">
             <Mail className="w-3.5 h-3.5" />
           </span>
-          <span className="text-[11px] font-mono uppercase tracking-wider text-white/50">
+          <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-white/50">
             Let's Collaborate
           </span>
         </div>
@@ -127,7 +127,7 @@ export const ContactBox = () => {
             required
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-full bg-[#101018]/90 border border-white/10 rounded-lg pl-8 pr-2.5 py-2 text-xs text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/60 focus:bg-[#151522] transition-all"
+            className="w-full bg-[#101018]/90 border border-white/10 rounded-lg pl-8 pr-2.5 py-2 text-base sm:text-xs text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/60 focus:bg-[#151522] transition-all"
           />
         </div>
 
@@ -139,7 +139,7 @@ export const ContactBox = () => {
             required
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full bg-[#101018]/90 border border-white/10 rounded-lg pl-8 pr-2.5 py-2 text-xs text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/60 focus:bg-[#151522] transition-all"
+            className="w-full bg-[#101018]/90 border border-white/10 rounded-lg pl-8 pr-2.5 py-2 text-base sm:text-xs text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/60 focus:bg-[#151522] transition-all"
           />
         </div>
 
@@ -151,7 +151,7 @@ export const ContactBox = () => {
             rows={3}
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            className="w-full bg-[#101018]/90 border border-white/10 rounded-lg pl-8 pr-2.5 py-2 text-xs text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/60 focus:bg-[#151522] transition-all resize-none"
+            className="w-full bg-[#101018]/90 border border-white/10 rounded-lg pl-8 pr-2.5 py-2 text-base sm:text-xs text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/60 focus:bg-[#151522] transition-all resize-none"
           />
         </div>
 

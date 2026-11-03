@@ -8,7 +8,7 @@ import { WorkspaceBox } from "./boxes/WorkspaceBox";
 
 export const BentoGrid = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4 max-w-5xl mx-auto px-3.5 sm:px-4">
       {/* TOP ROW */}
       <BentoCard className="col-span-1 min-h-[250px]" delay={0.1}>
          <TrustBox />
@@ -19,14 +19,14 @@ export const BentoGrid = () => {
 
       {/* BOTTOM SECTION */}
       {/* Left Column (Tall Globe) */}
-      <BentoCard className="col-span-1 min-h-[500px]" delay={0.3}>
+      <BentoCard className="col-span-1 min-h-[460px] sm:min-h-[500px]" delay={0.3}>
          <GlobeBox />
       </BentoCard>
 
       {/* Right Columns */}
-      <div className="col-span-1 md:col-span-2 flex flex-col gap-4">
+      <div className="col-span-1 md:col-span-2 flex flex-col gap-3.5 sm:gap-4">
          {/* Let's work together & Featured */}
-         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex-1">
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4 flex-1">
             <BentoCard delay={0.4}>
                <ContactBox />
             </BentoCard>

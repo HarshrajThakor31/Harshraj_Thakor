@@ -7,8 +7,8 @@ interface AboutSectionProps {
 
 export const AboutSection = ({ onOpenResume }: AboutSectionProps) => {
   return (
-    <section id="about" className="py-20 relative z-10 max-w-5xl mx-auto px-4 border-t border-white/5 mt-10 content-auto">
-      <div className="flex items-center justify-between mb-10">
+    <section id="about" className="py-14 sm:py-20 relative z-10 max-w-5xl mx-auto px-4 border-t border-white/5 mt-10 content-auto">
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-8 sm:mb-10">
         <span className="inline-block text-xs font-semibold text-white/90 bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/10 uppercase tracking-wider shadow-sm">
           Know About Me
         </span>
@@ -18,17 +18,17 @@ export const AboutSection = ({ onOpenResume }: AboutSectionProps) => {
         </span>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center lg:items-start">
+      <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center lg:items-start">
         {/* Left Side: Personal Narrative & Resume Info */}
         <div className="flex-1 space-y-6">
-          <h2 className="text-3xl md:text-5xl font-serif text-white leading-[1.2] [text-shadow:_0_2px_16px_rgba(0,0,0,0.8)]">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif text-white leading-[1.25] sm:leading-[1.2] [text-shadow:_0_2px_16px_rgba(0,0,0,0.8)]">
             Full-Stack Developer crafting scalable systems &amp;{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-emerald-300 italic font-normal drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
               seamless digital experiences
             </span>
           </h2>
 
-          <div className="rounded-2xl bg-[#0a0a14]/85 backdrop-blur-xl border border-white/10 p-6 md:p-8 space-y-4 text-slate-100 leading-relaxed text-base md:text-lg shadow-2xl shadow-black/50">
+          <div className="rounded-2xl bg-[#0a0a14]/85 backdrop-blur-xl border border-white/10 p-5 sm:p-6 md:p-8 space-y-4 text-slate-100 leading-relaxed text-sm sm:text-base md:text-lg shadow-2xl shadow-black/50">
             <p>
               I'm <strong className="text-white font-semibold">Harshraj Thakor</strong>, an Information Technology undergraduate at <span className="text-cyan-300 font-medium">Parul University (CGPA: 7.0/10)</span> with hands-on experience engineering full-stack web applications using <span className="text-white font-medium">React.js, Node.js, Express.js, PostgreSQL, and TypeScript</span>.
             </p>
@@ -47,7 +47,7 @@ export const AboutSection = ({ onOpenResume }: AboutSectionProps) => {
           <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-purple-600/20 to-transparent blur-[80px] rounded-full pointer-events-none" />
 
           <motion.div
-            className="w-full max-w-[340px] relative rounded-3xl bg-[#0f0f18] border border-white/15 p-4 shadow-[0_0_40px_rgba(0,0,0,0.8)] group overflow-hidden will-change-transform"
+            className="w-full max-w-[320px] sm:max-w-[340px] relative rounded-3xl bg-[#0f0f18] border border-white/15 p-3.5 sm:p-4 shadow-[0_0_40px_rgba(0,0,0,0.8)] group overflow-hidden will-change-transform"
             whileHover={{ y: -4, scale: 1.01 }}
             transition={{ duration: 0.2 }}
           >
@@ -100,7 +100,7 @@ export const AboutSection = ({ onOpenResume }: AboutSectionProps) => {
           </motion.div>
 
           {/* Action CTAs */}
-          <div className="w-full max-w-[340px] mt-5 flex flex-col gap-2.5">
+          <div className="w-full max-w-[320px] sm:max-w-[340px] mt-5 flex flex-col gap-2.5">
             {onOpenResume && (
               <button
                 onClick={onOpenResume}

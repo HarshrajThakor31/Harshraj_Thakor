@@ -20,7 +20,7 @@ export const BentoCard = ({ className, children, delay = 0 }: BentoCardProps) =>
       }}
       whileHover={{ scale: 1.01 }}
       className={cn(
-        "relative flex h-full w-full flex-col overflow-hidden rounded-[24px]",
+        "relative flex h-full w-full flex-col overflow-hidden rounded-[20px] sm:rounded-[24px]",
         "bg-[#0a0a0a] border border-white/[0.08]",
         "shadow-[0_0_0_1px_rgba(255,255,255,0.02)_inset,0_8px_40px_rgba(0,0,0,0.4)]",
         "hover:border-white/[0.15] transition-colors duration-300 will-change-transform",

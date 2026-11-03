@@ -62,13 +62,13 @@ export const ExperienceSection = ({ onOpenResume }: { onOpenResume?: () => void 
   ];
 
   return (
-    <section id="experience" className="py-20 relative z-10 max-w-5xl mx-auto px-4 border-t border-white/5 content-auto">
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+    <section id="experience" className="py-14 sm:py-20 relative z-10 max-w-5xl mx-auto px-4 border-t border-white/5 content-auto">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-6">
         <div>
           <span className="inline-block text-xs font-semibold text-white/90 bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/10 uppercase tracking-wider mb-3 shadow-sm">
             Journey &amp; Track Record
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif text-white tracking-tight [text-shadow:_0_2px_16px_rgba(0,0,0,0.8)]">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif text-white tracking-tight [text-shadow:_0_2px_16px_rgba(0,0,0,0.8)]">
             Experience &amp;{" "}
             <span className="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-emerald-300 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
               Education
@@ -87,7 +87,7 @@ export const ExperienceSection = ({ onOpenResume }: { onOpenResume?: () => void 
         )}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
         {/* Left Column: Work Experience (7 cols) */}
         <div className="lg:col-span-7 space-y-6">
           <div className="flex items-center gap-2.5 text-white/90 font-medium text-lg border-b border-white/10 pb-4">
@@ -105,13 +105,13 @@ export const ExperienceSection = ({ onOpenResume }: { onOpenResume?: () => void 
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="relative rounded-2xl bg-[#0a0a10] border border-white/10 p-6 md:p-8 hover:border-blue-500/30 transition-all group will-change-transform"
+                className="relative rounded-2xl bg-[#0a0a10] border border-white/10 p-5 sm:p-6 md:p-8 hover:border-blue-500/30 transition-all group will-change-transform"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 blur-2xl rounded-full pointer-events-none group-hover:bg-blue-500/10 transition-all" />
 
                 <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
                   <div>
-                    <h4 className="text-xl font-semibold text-white group-hover:text-blue-300 transition-colors">
+                    <h4 className="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-300 transition-colors">
                       {exp.role}
                     </h4>
                     <p className="text-base font-medium text-blue-400 mt-0.5">
@@ -158,7 +158,7 @@ export const ExperienceSection = ({ onOpenResume }: { onOpenResume?: () => void 
           </div>
 
           {/* Extracurricular Leadership Card */}
-          <div className="rounded-2xl bg-[#0a0a10] border border-white/10 p-5 md:p-6">
+          <div className="rounded-2xl bg-[#0a0a10] border border-white/10 p-4 sm:p-5 md:p-6">
             <div className="flex items-center gap-2.5 mb-2">
               <Award className="w-4 h-4 text-purple-400" />
               <h4 className="text-white font-semibold text-base">Leadership &amp; Extracurricular</h4>
@@ -169,8 +169,8 @@ export const ExperienceSection = ({ onOpenResume }: { onOpenResume?: () => void 
           </div>
 
           {/* IMPACT Placement Training Card */}
-          <div className="rounded-2xl bg-[#0a0a10] border border-white/10 p-5 md:p-6 hover:border-cyan-500/30 transition-all">
-            <div className="flex items-center justify-between mb-2">
+          <div className="rounded-2xl bg-[#0a0a10] border border-white/10 p-4 sm:p-5 md:p-6 hover:border-cyan-500/30 transition-all">
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
               <div className="flex items-center gap-2.5">
                 <Target className="w-4 h-4 text-cyan-400" />
                 <h4 className="text-white font-semibold text-base">IMPACT Placement Training</h4>
@@ -202,9 +202,9 @@ export const ExperienceSection = ({ onOpenResume }: { onOpenResume?: () => void 
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.3, delay: idx * 0.06 }}
-                className="rounded-2xl bg-[#0a0a10] border border-white/10 p-5 hover:border-purple-500/30 transition-all will-change-transform"
+                className="rounded-2xl bg-[#0a0a10] border border-white/10 p-4 sm:p-5 hover:border-purple-500/30 transition-all will-change-transform"
               >
-                <div className="flex items-start justify-between gap-2 mb-1.5">
+                <div className="flex flex-wrap items-start justify-between gap-2 mb-1.5">
                   <h4 className="text-base font-semibold text-white leading-snug">
                     {edu.degree}
                   </h4>
@@ -242,7 +242,7 @@ export const ExperienceSection = ({ onOpenResume }: { onOpenResume?: () => void 
             {certifications.map((cert, i) => (
               <div
                 key={i}
-                className="rounded-xl bg-[#0e0e16] border border-white/10 p-3.5 flex items-center justify-between hover:border-white/20 transition-all group"
+                className="rounded-xl bg-[#0e0e16] border border-white/10 p-3 sm:p-3.5 flex items-center justify-between gap-2 hover:border-white/20 transition-all group"
               >
                 <div>
                   <h5 className="text-sm font-semibold text-white group-hover:text-emerald-300 transition-colors">

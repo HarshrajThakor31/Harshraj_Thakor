@@ -468,7 +468,7 @@ export const GlobeBox = () => {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col h-full relative overflow-hidden p-6 md:p-8 select-none"
+      className="flex flex-col h-full relative overflow-hidden p-5 sm:p-6 md:p-8 select-none"
     >
       {/* Background atmospheric glow */}
       <div className="absolute inset-0 pointer-events-none">
@@ -477,7 +477,7 @@ export const GlobeBox = () => {
       </div>
 
       {/* Header Info */}
-      <div className="relative z-10 space-y-4">
+      <div className="relative z-10 space-y-3 sm:space-y-4">
         <div className="flex items-center justify-between">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[11px] font-medium tracking-wide">
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
@@ -501,7 +501,7 @@ export const GlobeBox = () => {
           </div>
         </div>
 
-        <h3 className="text-2xl font-serif italic text-white/95 leading-snug">
+        <h3 className="text-xl sm:text-2xl font-serif italic text-white/95 leading-snug">
           I'm very flexible with time <br /> zone communications
         </h3>
 
@@ -529,7 +529,7 @@ export const GlobeBox = () => {
 
       {/* 3D Cobe Globe Canvas Area */}
       <div
-        className="absolute -bottom-28 md:-bottom-24 left-1/2 -translate-x-1/2 w-[520px] h-[520px] flex items-center justify-center cursor-grab active:cursor-grabbing touch-none will-change-transform"
+        className="absolute -bottom-20 sm:-bottom-24 md:-bottom-24 left-1/2 -translate-x-1/2 w-[320px] h-[320px] xs:w-[380px] xs:h-[380px] sm:w-[460px] sm:h-[460px] md:w-[520px] md:h-[520px] flex items-center justify-center cursor-grab active:cursor-grabbing touch-pan-y will-change-transform"
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
@@ -538,8 +538,8 @@ export const GlobeBox = () => {
         <canvas
           ref={canvasRef}
           style={{
-            width: 520,
-            height: 520,
+            width: "100%",
+            height: "100%",
             maxWidth: "100%",
             aspectRatio: "1",
             objectFit: "contain",
@@ -549,7 +549,7 @@ export const GlobeBox = () => {
       </div>
 
       {/* Live Local Time & Availability Readout Banner */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 w-[calc(100%-2rem)] max-w-[360px] pointer-events-none">
+      <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 z-20 w-[calc(100%-1.5rem)] sm:w-[calc(100%-2rem)] max-w-[360px] pointer-events-none">
         <div className="flex flex-col gap-1.5 px-3.5 py-2 rounded-xl bg-black/80 border border-white/15 backdrop-blur-md shadow-2xl">
           {/* Top Row: Flag, City, Live Clock, and UTC badge */}
           <div className="flex items-center justify-between gap-2">

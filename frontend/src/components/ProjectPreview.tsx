@@ -156,7 +156,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({
       className="group/preview relative w-full rounded-2xl bg-[#0f0f16] border border-white/10 overflow-hidden shadow-2xl transition-all duration-300 ease-out hover:border-white/20 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] will-change-transform"
     >
       {/* Fake Browser Window Top Bar */}
-      <div className="flex items-center justify-between px-3.5 py-2.5 bg-[#0a0a10] border-b border-white/10 select-none relative z-20">
+      <div className="flex items-center justify-between px-2.5 sm:px-3.5 py-2 sm:py-2.5 bg-[#0a0a10] border-b border-white/10 select-none relative z-20">
         {/* 3 Window Control Dots */}
         <div className="flex items-center gap-1.5 shrink-0">
           <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]/90 border border-[#e0443e]/40" />
@@ -165,26 +165,26 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({
         </div>
 
         {/* Small Address Bar with Site Domain & Live Indicator */}
-        <div className="flex-1 flex justify-center px-2">
-          <div className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] border border-white/10 text-[11px] font-mono text-white/60 max-w-[200px] sm:max-w-[260px] truncate shadow-inner">
+        <div className="flex-1 flex justify-center px-1.5 sm:px-2">
+          <div className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-md bg-white/[0.04] border border-white/10 text-[10px] sm:text-[11px] font-mono text-white/60 max-w-[130px] xs:max-w-[190px] sm:max-w-[260px] truncate shadow-inner">
             <Lock className="w-2.5 h-2.5 text-emerald-400 shrink-0" />
             <span className="truncate tracking-wide">{domain}</span>
           </div>
         </div>
 
         {/* Status indicator & Actions */}
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           {isEligibleForLive && (
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1 sm:gap-1.5">
               {status === "loaded" ? (
-                <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full shadow-sm">
+                <span className="inline-flex items-center gap-1 text-[9px] sm:text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-1.5 sm:px-2 py-0.5 rounded-full shadow-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   <span>Live</span>
                 </span>
               ) : status === "loading" ? (
-                <span className="inline-flex items-center gap-1 text-[10px] font-medium text-cyan-300 bg-cyan-500/10 border border-cyan-500/20 px-2 py-0.5 rounded-full">
+                <span className="inline-flex items-center gap-1 text-[9px] sm:text-[10px] font-medium text-cyan-300 bg-cyan-500/10 border border-cyan-500/20 px-1.5 sm:px-2 py-0.5 rounded-full">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-spin" />
-                  <span>Connecting</span>
+                  <span className="hidden xs:inline">Connecting</span>
                 </span>
               ) : null}
 
@@ -193,7 +193,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({
                   type="button"
                   onClick={handleReload}
                   title="Reload live preview"
-                  className="p-1 rounded text-white/40 hover:text-white transition-colors cursor-pointer"
+                  className="p-1 rounded text-white/40 hover:text-white transition-colors cursor-pointer hidden sm:inline-flex"
                 >
                   <RefreshCw className="w-3 h-3" />
                 </button>

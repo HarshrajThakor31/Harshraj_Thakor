@@ -83,8 +83,8 @@ const projects: Project[] = [
 
 export const FeaturedHighlights = () => {
   return (
-    <section id="projects" className="py-20 relative z-10 max-w-5xl mx-auto px-4 content-auto">
-      <div className="text-center mb-14">
+    <section id="projects" className="py-14 sm:py-20 relative z-10 max-w-5xl mx-auto px-4 content-auto">
+      <div className="text-center mb-10 sm:mb-14">
         <span className="inline-block text-xs font-semibold text-cyan-300 bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/10 uppercase tracking-wider mb-4 shadow-sm">
           Featured Engineering Projects
         </span>
@@ -99,7 +99,7 @@ export const FeaturedHighlights = () => {
         </p>
       </div>
 
-      <div className="space-y-10">
+      <div className="space-y-8 sm:space-y-10">
         {projects.map((project, idx) => (
           <motion.div
             key={idx}
@@ -107,12 +107,12 @@ export const FeaturedHighlights = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.35, delay: idx * 0.08, ease: "easeOut" }}
-            className={`group relative overflow-hidden rounded-[26px] bg-[#0c0c14] border ${project.border} p-6 sm:p-8 md:p-9 transition-all hover:border-white/30 hover:shadow-[0_0_35px_rgba(59,130,246,0.15)]`}
+            className={`group relative overflow-hidden rounded-2xl sm:rounded-[26px] bg-[#0c0c14] border ${project.border} p-4 xs:p-5 sm:p-8 md:p-9 transition-all hover:border-white/30 hover:shadow-[0_0_35px_rgba(59,130,246,0.15)]`}
           >
             {/* Ambient Background Gradient */}
             <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-60 pointer-events-none group-hover:opacity-100 transition-opacity duration-300`} />
 
-            <div className="relative z-10 flex flex-col lg:flex-row gap-8 lg:gap-10 items-center">
+            <div className="relative z-10 flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 items-center">
               {/* Left Column: Project details */}
               <div className="flex-1 space-y-4">
                 <div className="flex flex-wrap items-center gap-2.5">

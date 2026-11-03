@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 
 export const TrustBox = () => {
   return (
-    <div className="flex flex-col h-full justify-between p-6 sm:p-7 relative overflow-hidden group">
+    <div className="flex flex-col h-full justify-between p-5 sm:p-7 relative overflow-hidden group">
       {/* Ambient background glow */}
       <div className="absolute -top-12 -left-12 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-cyan-500/15 transition-all duration-700" />
       <div className="absolute -bottom-10 -right-10 w-44 h-44 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Header bar */}
-      <div className="relative z-10 flex items-center justify-between">
+      <div className="relative z-10 flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <span className="p-1 rounded-md bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
             <ShieldCheck className="w-3.5 h-3.5" />

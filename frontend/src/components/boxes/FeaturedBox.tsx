@@ -55,13 +55,13 @@ export const FeaturedBox = () => {
   const current = projects.find((p) => p.id === selectedId) || projects[0];
 
   return (
-    <div className="flex flex-col h-full justify-between p-5 sm:p-6 relative overflow-hidden group">
+    <div className="flex flex-col h-full justify-between p-4 xs:p-5 sm:p-6 relative overflow-hidden group">
       {/* Background ambient lighting */}
       <div className="absolute top-0 right-0 w-48 h-48 bg-purple-600/10 rounded-full blur-3xl pointer-events-none group-hover:bg-purple-600/20 transition-all duration-700" />
       <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Top Header */}
-      <div className="relative z-10 flex items-center justify-between">
+      <div className="relative z-10 flex flex-wrap items-center justify-between gap-1.5">
         <div className="flex items-center gap-1.5">
           <span className="p-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-400">
             <Sparkles className="w-3.5 h-3.5" />

@@ -7,12 +7,12 @@ interface FooterProps {
 
 export const Footer = ({ onOpenResume }: FooterProps) => {
   return (
-    <footer className="w-full border-t border-white/10 bg-[#050505] pt-14 pb-8 relative z-10 content-auto">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 flex flex-col md:flex-row justify-between gap-10">
+    <footer className="w-full border-t border-white/10 bg-[#050505] pt-10 sm:pt-14 pb-8 relative z-10 content-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row justify-between gap-8 sm:gap-10">
         
         <div className="space-y-4 max-w-sm">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20">
+            <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 shrink-0">
               <img
                 src="/Harshraj_Image/Harshraj_thumb.jpg"
                 alt="Harshraj Thakor"
@@ -67,7 +67,7 @@ export const Footer = ({ onOpenResume }: FooterProps) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8">
           <div className="flex flex-col gap-2">
             <span className="text-[10px] uppercase tracking-widest text-white/40 mb-1.5 font-mono">Navigation</span>
             <a href="#home" className="text-sm text-white/70 hover:text-white transition-colors">Home</a>
@@ -84,7 +84,7 @@ export const Footer = ({ onOpenResume }: FooterProps) => {
             <a href="#projects" className="text-sm text-white/70 hover:text-white transition-colors">CandidateAI</a>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 col-span-2 sm:col-span-1 pt-2 sm:pt-0 border-t border-white/5 sm:border-0">
             <span className="text-[10px] uppercase tracking-widest text-white/40 mb-1.5 font-mono">Resume &amp; Contact</span>
             {onOpenResume ? (
               <button
@@ -111,7 +111,7 @@ export const Footer = ({ onOpenResume }: FooterProps) => {
             >
               Resume PDF (Tab)
             </a>
-            <a href="mailto:harshrajthakor31@gmail.com" className="text-sm text-white/70 hover:text-white transition-colors">
+            <a href="mailto:harshrajthakor31@gmail.com" className="text-sm text-white/70 hover:text-white transition-colors break-all">
               harshrajthakor31@gmail.com
             </a>
             <a href="tel:+918238673505" className="text-sm text-white/70 hover:text-white transition-colors">
@@ -122,7 +122,7 @@ export const Footer = ({ onOpenResume }: FooterProps) => {
 
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/40">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 mt-8 sm:mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/40 text-center sm:text-left">
         <p>© 2026 Harshraj Thakor. All rights reserved.</p>
         <div className="flex gap-6">
           <a href="https://harshraj-thakor.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">

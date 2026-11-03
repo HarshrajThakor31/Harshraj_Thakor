@@ -45,7 +45,7 @@ export const TechMarqueeBox = () => {
   const row2 = techStack.slice(9);
 
   return (
-    <div className="flex flex-col h-full justify-between p-6 sm:p-7 relative overflow-hidden group">
+    <div className="flex flex-col h-full justify-between p-5 sm:p-7 relative overflow-hidden group">
       {/* Ambient background glow */}
       <div className="absolute top-0 right-1/4 w-72 h-44 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-indigo-500/15 transition-all duration-700" />
       <div className="absolute -bottom-10 left-10 w-60 h-32 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -62,11 +62,11 @@ export const TechMarqueeBox = () => {
             <span className="p-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400">
               <Cpu className="w-3.5 h-3.5" />
             </span>
-            <span className="text-[11px] font-mono uppercase tracking-wider text-white/50">
+            <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-white/50">
               Full-Stack Architecture &amp; Tech Stack
             </span>
           </div>
-          <h3 className="text-xl sm:text-2xl font-semibold text-white/95 tracking-tight leading-snug">
+          <h3 className="text-lg sm:text-2xl font-semibold text-white/95 tracking-tight leading-snug">
             Crafting scalable experiences powered by next-gen tech
           </h3>
           <p className="text-xs text-white/60 mt-1 max-w-lg">
@@ -89,7 +89,7 @@ export const TechMarqueeBox = () => {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`text-[11px] font-medium px-3 py-1 rounded-full border transition-all cursor-pointer ${
+              className={`text-[10px] sm:text-[11px] font-medium px-2.5 sm:px-3 py-1 rounded-full border transition-all cursor-pointer ${
                 isActive
                   ? "bg-white/15 text-white border-white/30 shadow-[0_0_12px_rgba(255,255,255,0.15)]"
                   : "bg-white/[0.03] text-white/50 border-white/[0.06] hover:text-white/80 hover:border-white/15"
@@ -153,9 +153,9 @@ export const TechMarqueeBox = () => {
       </div>
 
       {/* Bottom Architectural Highlights strip */}
-      <div className="relative z-10 pt-3 border-t border-white/[0.06] flex flex-wrap items-center justify-between text-[11px] text-white/50">
+      <div className="relative z-10 pt-3 border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-2 text-[10px] sm:text-[11px] text-white/50">
         <div className="flex items-center gap-2">
-          <Terminal className="w-3.5 h-3.5 text-cyan-400" />
+          <Terminal className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
           <span className="font-mono">Clean Architecture • Strict Types • High Reliability</span>
         </div>
         <div className="hidden md:flex items-center gap-1.5 text-white/40 font-mono text-[10px]">
