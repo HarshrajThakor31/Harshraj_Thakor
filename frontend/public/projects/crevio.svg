@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a14" />
+      <stop offset="50%" stop-color="#07070b" />
+      <stop offset="100%" stop-color="#030306" />
+    </linearGradient>
+
+    <!-- Card Gradients -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#181829" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0f0f1c" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1440" height="900" fill="url(#bg)" />
+
+  <!-- Ambient Glows -->
+  <circle cx="200" cy="180" r="280" fill="#7c3aed" opacity="0.12" filter="url(#glow)" />
+  <circle cx="1200" cy="300" r="320" fill="#2563eb" opacity="0.1" filter="url(#glow)" />
+  <circle cx="700" cy="750" r="250" fill="#a855f7" opacity="0.08" filter="url(#glow)" />
+
+  <!-- Grid overlay -->
+  <g opacity="0.06" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="120" x2="1440" y2="120" />
+    <line x1="0" y1="240" x2="1440" y2="240" />
+    <line x1="0" y1="360" x2="1440" y2="360" />
+    <line x1="0" y1="480" x2="1440" y2="480" />
+    <line x1="0" y1="600" x2="1440" y2="600" />
+    <line x1="0" y1="720" x2="1440" y2="720" />
+    <line x1="0" y1="840" x2="1440" y2="840" />
+    <line x1="160" y1="0" x2="160" y2="900" />
+    <line x1="320" y1="0" x2="320" y2="900" />
+    <line x1="480" y1="0" x2="480" y2="900" />
+    <line x1="640" y1="0" x2="640" y2="900" />
+    <line x1="800" y1="0" x2="800" y2="900" />
+    <line x1="960" y1="0" x2="960" y2="900" />
+    <line x1="1120" y1="0" x2="1120" y2="900" />
+    <line x1="1280" y1="0" x2="1280" y2="900" />
+  </g>
+
+  <!-- Top Navigation Header -->
+  <rect x="0" y="0" width="1440" height="74" fill="#0d0d18" fill-opacity="0.9" />
+  <line x1="0" y1="74" x2="1440" y2="74" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" />
+
+  <!-- Logo -->
+  <g transform="translate(60, 22)">
+    <rect width="32" height="32" rx="8" fill="url(#purpleGrad)" />
+    <path d="M 10 16 L 15 21 L 23 11" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="44" y="23" fill="#ffffff" font-size="21" font-weight="800" letter-spacing="1" class="font-sans">CREVIO</text>
+    <rect x="145" y="4" width="85" height="22" rx="11" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-opacity="0.3" />
+    <text x="187" y="19" fill="#c4b5fd" font-size="11" font-weight="600" text-anchor="middle" class="font-sans">ENTERPRISE</text>
+  </g>
+
+  <!-- Navigation Links -->
+  <g transform="translate(480, 28)" class="font-sans" font-size="13" font-weight="500">
+    <text x="0" y="15" fill="#ffffff">Contract Lifecycle</text>
+    <circle cx="120" cy="11" r="2" fill="#ffffff" opacity="0.3" />
+    <text x="140" y="15" fill="#94a3b8">Creator Marketplace</text>
+    <circle cx="280" cy="11" r="2" fill="#ffffff" opacity="0.3" />
+    <text x="300" y="15" fill="#94a3b8">Fit Scoring Engine</text>
+    <circle cx="430" cy="11" r="2" fill="#ffffff" opacity="0.3" />
+    <text x="450" y="15" fill="#94a3b8">FTC Verification</text>
+  </g>
+
+  <!-- Live Status Badge on Nav Right -->
+  <g transform="translate(1190, 22)">
+    <rect width="190" height="32" rx="16" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-opacity="0.3" />
+    <circle cx="20" cy="16" r="4" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="34" y="20" fill="#34d399" font-size="12" font-weight="600" class="font-sans">Neon DB &amp; Socket.IO Live</text>
+  </g>
+
+  <!-- 4 Metrics KPI Bar -->
+  <g transform="translate(60, 104)">
+    <!-- KPI 1 -->
+    <rect x="0" y="0" width="310" height="106" rx="16" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.08" />
+    <text x="24" y="32" fill="#94a3b8" font-size="12" font-weight="500" class="font-sans">ACTIVE CONTRACT VALUE</text>
+    <text x="24" y="70" fill="#ffffff" font-size="28" font-weight="700" class="font-sans">$142,500</text>
+    <rect x="226" y="24" width="60" height="22" rx="6" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-opacity="0.4" />
+    <text x="256" y="39" fill="#60a5fa" font-size="11" font-weight="600" text-anchor="middle" class="font-sans">+24.8%</text>
+
+    <!-- KPI 2 -->
+    <rect x="336" y="0" width="310" height="106" rx="16" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.08" />
+    <text x="360" y="32" fill="#94a3b8" font-size="12" font-weight="500" class="font-sans">TERMS HASH VERIFIED</text>
+    <text x="360" y="70" fill="#34d399" font-size="28" font-weight="700" class="font-sans">100% Immutable</text>
+    <rect x="556" y="24" width="66" height="22" rx="6" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.4" />
+    <text x="589" y="39" fill="#34d399" font-size="11" font-weight="600" text-anchor="middle" class="font-sans">SHA-256</text>
+
+    <!-- KPI 3 -->
+    <rect x="672" y="0" width="310" height="106" rx="16" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.08" />
+    <text x="696" y="32" fill="#94a3b8" font-size="12" font-weight="500" class="font-sans">AVG CREATOR FIT SCORE</text>
+    <text x="696" y="70" fill="#ffffff" font-size="28" font-weight="700" class="font-sans">94.6 / 100</text>
+    <rect x="898" y="24" width="60" height="22" rx="6" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-opacity="0.4" />
+    <text x="928" y="39" fill="#c084fc" font-size="11" font-weight="600" text-anchor="middle" class="font-sans">4-AXIS</text>
+
+    <!-- KPI 4 -->
+    <rect x="1008" y="0" width="312" height="106" rx="16" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.08" />
+    <text x="1032" y="32" fill="#94a3b8" font-size="12" font-weight="500" class="font-sans">FTC &amp; DELIVERABLE STATUS</text>
+    <text x="1032" y="70" fill="#38bdf8" font-size="28" font-weight="700" class="font-sans">Auto Evaluated</text>
+    <rect x="1228" y="24" width="68" height="22" rx="6" fill="#0284c7" fill-opacity="0.15" stroke="#0284c7" stroke-opacity="0.4" />
+    <text x="1262" y="39" fill="#38bdf8" font-size="11" font-weight="600" text-anchor="middle" class="font-sans">AI DECISION</text>
+  </g>
+
+  <!-- Main Pipeline Card (Left, Wide) -->
+  <g transform="translate(60, 236)">
+    <rect width="845" height="610" rx="20" fill="url(#cardGrad)" stroke="#8b5cf6" stroke-opacity="0.25" />
+    
+    <!-- Header -->
+    <g transform="translate(32, 32)">
+      <text x="0" y="0" fill="#ffffff" font-size="20" font-weight="700" class="font-sans">Contract Execution Pipeline</text>
+      <text x="0" y="24" fill="#94a3b8" font-size="13" class="font-sans">Campaign #CRV-2026-9041 • Dual Brand &amp; Creator Cryptographic Execution</text>
+    </g>
+
+    <!-- Pipeline Visual Tabs -->
+    <g transform="translate(32, 85)">
+      <!-- Step 1: Pending -->
+      <rect x="0" y="0" width="246" height="58" rx="12" fill="#1e1e38" stroke="#3b82f6" stroke-opacity="0.4" />
+      <circle cx="28" cy="29" r="12" fill="#3b82f6" fill-opacity="0.2" />
+      <text x="28" y="34" fill="#60a5fa" font-size="11" font-weight="700" text-anchor="middle" class="font-sans">1</text>
+      <text x="50" y="24" fill="#ffffff" font-size="13" font-weight="600" class="font-sans">Pending Extraction</text>
+      <text x="50" y="42" fill="#94a3b8" font-size="11" class="font-sans">PDF Terms Parsed</text>
+
+      <!-- Step 2: Locked -->
+      <rect x="264" y="0" width="246" height="58" rx="12" fill="#1e1e38" stroke="#f59e0b" stroke-opacity="0.4" />
+      <circle cx="292" cy="29" r="12" fill="#f59e0b" fill-opacity="0.2" />
+      <text x="292" y="34" fill="#fbbf24" font-size="11" font-weight="700" text-anchor="middle" class="font-sans">2</text>
+      <text x="314" y="24" fill="#ffffff" font-size="13" font-weight="600" class="font-sans">Locked for Review</text>
+      <text x="314" y="42" fill="#94a3b8" font-size="11" class="font-sans">Dual E-Signatures Active</text>
+
+      <!-- Step 3: Executed -->
+      <rect x="528" y="0" width="253" height="58" rx="12" fill="#152e25" stroke="#10b981" stroke-opacity="0.6" />
+      <circle cx="556" cy="29" r="12" fill="#10b981" fill-opacity="0.3" />
+      <path d="M 551 29 L 555 33 L 562 25" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" />
+      <text x="578" y="24" fill="#34d399" font-size="13" font-weight="700" class="font-sans">Executed (Sealed)</text>
+      <text x="578" y="42" fill="#6ee7b7" font-size="11" class="font-sans">SHA-256 Hashed Immutability</text>
+    </g>
+
+    <!-- Contract Details Table -->
+    <g transform="translate(32, 170)">
+      <!-- Row 1 -->
+      <rect x="0" y="0" width="781" height="74" rx="12" fill="#141427" stroke="#ffffff" stroke-opacity="0.05" />
+      <text x="24" y="30" fill="#a78bfa" font-size="11" font-weight="600" class="font-sans">CAMPAIGN TITLE &amp; DELIVERABLES</text>
+      <text x="24" y="52" fill="#ffffff" font-size="14" font-weight="600" class="font-sans">Apex Tech: Next-Gen Dev Tools Launch (1x YouTube Video, 2x Twitter Threads)</text>
+      <rect x="650" y="24" width="107" height="26" rx="13" fill="#8b5cf6" fill-opacity="0.2" stroke="#8b5cf6" stroke-opacity="0.4" />
+      <text x="703.5" y="41" fill="#c4b5fd" font-size="11" font-weight="600" text-anchor="middle" class="font-sans">Verified Deliverable</text>
+
+      <!-- Row 2 -->
+      <rect x="0" y="86" width="781" height="74" rx="12" fill="#141427" stroke="#ffffff" stroke-opacity="0.05" />
+      <text x="24" y="116" fill="#a78bfa" font-size="11" font-weight="600" class="font-sans">E-SIGNATURE COMPLIANCE TRACE</text>
+      <text x="24" y="138" fill="#ffffff" font-size="14" font-weight="600" class="font-sans">Brand: Apex Media Inc. [Signed ✓ 14:22] • Creator: Harshraj Thakor [Signed ✓ 14:23]</text>
+      <rect x="662" y="110" width="95" height="26" rx="13" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-opacity="0.4" />
+      <text x="709.5" y="127" fill="#34d399" font-size="11" font-weight="600" text-anchor="middle" class="font-sans">Dual Signed</text>
+
+      <!-- Row 3 -->
+      <rect x="0" y="172" width="781" height="74" rx="12" fill="#141427" stroke="#ffffff" stroke-opacity="0.05" />
+      <text x="24" y="202" fill="#a78bfa" font-size="11" font-weight="600" class="font-sans">IMMUTABLE CRYPTOGRAPHIC HASH</text>
+      <text x="24" y="224" fill="#38bdf8" font-size="13" font-weight="500" class="font-mono">SHA-256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</text>
+      <rect x="668" y="196" width="89" height="26" rx="13" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7" stroke-opacity="0.4" />
+      <text x="712.5" y="213" fill="#38bdf8" font-size="11" font-weight="600" text-anchor="middle" class="font-sans">Neon Synced</text>
+
+      <!-- Row 4 -->
+      <rect x="0" y="258" width="781" height="74" rx="12" fill="#141427" stroke="#ffffff" stroke-opacity="0.05" />
+      <text x="24" y="288" fill="#a78bfa" font-size="11" font-weight="600" class="font-sans">FTC DISCLOSURE ENGINE &amp; ESCROW</text>
+      <text x="24" y="310" fill="#ffffff" font-size="14" font-weight="600" class="font-sans">100% Disclosure Pass (#ad #sponsored verified via automated NLP parser)</text>
+      <rect x="655" y="282" width="102" height="26" rx="13" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-opacity="0.4" />
+      <text x="706" y="299" fill="#34d399" font-size="11" font-weight="600" text-anchor="middle" class="font-sans">Escrow Released</text>
+    </g>
+
+    <!-- Live Event Log -->
+    <g transform="translate(32, 530)">
+      <rect width="781" height="52" rx="10" fill="#0a0a16" stroke="#ffffff" stroke-opacity="0.08" />
+      <circle cx="20" cy="26" r="4" fill="#a855f7" />
+      <text x="36" y="30" fill="#94a3b8" font-size="12" class="font-mono">[Socket.IO 15:10:02] Event "contract:executed" broadcast to 2 subscribed clients in 16ms</text>
+    </g>
+  </g>
+
+  <!-- Right Panel: Creator Fit Scoring Engine -->
+  <g transform="translate(930, 236)">
+    <rect width="450" height="610" rx="20" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.08" />
+
+    <g transform="translate(30, 32)">
+      <text x="0" y="0" fill="#ffffff" font-size="20" font-weight="700" class="font-sans">Creator Fit Scoring</text>
+      <text x="0" y="24" fill="#94a3b8" font-size="13" class="font-sans">Multi-Dimensional Match Engine</text>
+    </g>
+
+    <!-- Overall Match Dial -->
+    <g transform="translate(30, 85)">
+      <rect width="390" height="90" rx="14" fill="#141427" stroke="#ffffff" stroke-opacity="0.05" />
+      <g transform="translate(30, 22)">
+        <text x="0" y="20" fill="#94a3b8" font-size="12" font-weight="500" class="font-sans">OVERALL MATCH SCORE</text>
+        <text x="0" y="48" fill="#ffffff" font-size="26" font-weight="800" class="font-sans">95.4% <tspan fill="#34d399" font-size="14" font-weight="600">(Exceptional Fit)</tspan></text>
+      </g>
+      <circle cx="330" cy="45" r="28" fill="none" stroke="#2e2e4a" stroke-width="6" />
+      <circle cx="330" cy="45" r="28" fill="none" stroke="url(#purpleGrad)" stroke-width="6" stroke-dasharray="176" stroke-dashoffset="18" stroke-linecap="round" transform="rotate(-90 330 45)" />
+      <text x="330" y="50" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" class="font-sans">95%</text>
+    </g>
+
+    <!-- Dimensional Breakdown Bars -->
+    <g transform="translate(30, 205)">
+      <!-- Dimension 1 -->
+      <text x="0" y="16" fill="#ffffff" font-size="13" font-weight="600" class="font-sans">Engagement Quality</text>
+      <text x="390" y="16" fill="#c084fc" font-size="13" font-weight="700" text-anchor="end" class="font-sans">94.8%</text>
+      <rect x="0" y="26" width="390" height="10" rx="5" fill="#1e1e36" />
+      <rect x="0" y="26" width="370" height="10" rx="5" fill="url(#purpleGrad)" />
+
+      <!-- Dimension 2 -->
+      <text x="0" y="70" fill="#ffffff" font-size="13" font-weight="600" class="font-sans">Content Quality &amp; Relevance</text>
+      <text x="390" y="70" fill="#60a5fa" font-size="13" font-weight="700" text-anchor="end" class="font-sans">92.4%</text>
+      <rect x="0" y="80" width="390" height="10" rx="5" fill="#1e1e36" />
+      <rect x="0" y="80" width="360" height="10" rx="5" fill="url(#blueGrad)" />
+
+      <!-- Dimension 3 -->
+      <text x="0" y="124" fill="#ffffff" font-size="13" font-weight="600" class="font-sans">Audience Demographics Fit</text>
+      <text x="390" y="124" fill="#34d399" font-size="13" font-weight="700" text-anchor="end" class="font-sans">96.7%</text>
+      <rect x="0" y="134" width="390" height="10" rx="5" fill="#1e1e36" />
+      <rect x="0" y="134" width="377" height="10" rx="5" fill="url(#emeraldGrad)" />
+
+      <!-- Dimension 4 -->
+      <text x="0" y="178" fill="#ffffff" font-size="13" font-weight="600" class="font-sans">Reliability &amp; Delivery Track Record</text>
+      <text x="390" y="178" fill="#f472b6" font-size="13" font-weight="700" text-anchor="end" class="font-sans">98.2%</text>
+      <rect x="0" y="188" width="390" height="10" rx="5" fill="#1e1e36" />
+      <rect x="0" y="188" width="383" height="10" rx="5" fill="url(#purpleGrad)" />
+    </g>
+
+    <!-- Bottom Feature Callout in Right Panel -->
+    <g transform="translate(30, 440)">
+      <rect width="390" height="140" rx="14" fill="#101020" stroke="#8b5cf6" stroke-opacity="0.3" />
+      <g transform="translate(20, 24)">
+        <text x="0" y="0" fill="#c4b5fd" font-size="12" font-weight="700" class="font-sans">TECH STACK INTEGRATION</text>
+        <text x="0" y="24" fill="#ffffff" font-size="13" font-weight="600" class="font-sans">React 18 • TypeScript • Node.js</text>
+        <text x="0" y="44" fill="#ffffff" font-size="13" font-weight="600" class="font-sans">Express.js • PostgreSQL (Neon DB)</text>
+        <text x="0" y="64" fill="#ffffff" font-size="13" font-weight="600" class="font-sans">Socket.IO • OpenAI API</text>
+        <text x="0" y="88" fill="#94a3b8" font-size="11" class="font-sans">Contract Automation &amp; Real-time Negotiator</text>
+      </g>
+    </g>
+  </g>
+</svg>
